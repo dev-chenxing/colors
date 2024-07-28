@@ -38,6 +38,7 @@ const EditableInput = React.forwardRef<HTMLInputElement, EditableInputProps>((pr
                 setValue(props.value);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.value]);
 
     function handleChange(evn: React.FocusEvent<HTMLInputElement>, valInit?: string) {

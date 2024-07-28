@@ -15,7 +15,6 @@ export interface SketchProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 
     prefixCls?: string;
     width?: number;
     color?: string | HsvaColor;
-    editableDisable?: boolean;
     disableAlpha?: boolean;
     onChange?: (newShade: ColorResult) => void;
 }
@@ -27,7 +26,6 @@ const Sketch = React.forwardRef<HTMLDivElement, SketchProps>((props, ref) => {
         onChange,
         width = 218,
         color,
-        editableDisable = true,
         disableAlpha = true,
         style,
         ...other
